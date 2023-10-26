@@ -19,54 +19,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common risingOS stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
-# risingOS Stuffs
-RISING_BUILDTYPE := OFFICIAL
-RISING_MAINTAINER := AAMIRR_ALI
-RISING_CHIPSET := SDM865-5G
-RISING_DEVICE := Bladerunner
-TARGET_FACE_UNLOCK_SUPPORTED := true
-EXTRA_UDFPS_ANIMATIONS := true
-TARGET_INCLUDE_LIVE_WALLPAPERS := true
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
-
-# Camera
-TARGET_BUILD_GRAPHENEOS_CAMERA := false
-
-TARGET_BUILD_APERTURE_CAMERA := true
-
-
-# UDFPS ICONS/ANIMATIONS
-TARGET_HAS_UDFPS := true
-
-# disable/enable blur support, default is false
-TARGET_ENABLE_BLUR := true
-
-# GMS build flags, if none were defined the package build type will be AOSP (default: false)
-WITH_GMS := true
-
-# Opt out of google dialer support, compiler will build aosp dialer,
-# package type will change from PIXEL -> GMS
-TARGET_OPTOUT_GOOGLE_TELEPHONY := false
-
-# Compiler will only build GMS playstore services, its dependencies, and Gboard app.
-# package type will change from PIXEL/GMS -> CORE
-TARGET_CORE_GMS := true
-
-# Package Type
-RISING_PACKAGE_TYPE := Gapps
-
-# Wether to use google (true) or AOSP (false) telephony package bundle. (defaults: false for gms core, true for pixel builds)
-TARGET_USE_GOOGLE_TELEPHONY := false
 
 # Inherit from device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_bladerunner
+PRODUCT_NAME := aosp_bladerunner
 PRODUCT_DEVICE := bladerunner
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := RMX2076

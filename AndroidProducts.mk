@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020 The LineageOS Project
+# Copyright (C) 2020 The evolutionOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_bladerunner.mk
+    $(LOCAL_DIR)/evolution_bladerunner.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_bladerunner-user \
-    lineage_bladerunner-userdebug \
-    lineage_bladerunner-eng
+    evolution_bladerunner-user \
+    evolution_bladerunner-userdebug \
+    evolution_bladerunner-eng
