@@ -21,6 +21,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit some common risingOS stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Call the BCR setup
+$(call inherit-product-if-exists, vendor/bcr/bcr.mk)
+
 #For official Devices:
 MATRIXX_BUILD_TYPE := Official
 MATRIXX_MAINTAINER := AAMIR_ALI
@@ -48,6 +51,9 @@ TARGET_HAS_UDFPS := true
 
 #Blur effect
 TARGET_ENABLE_BLUR := true
+
+#Add Google Contacts, Dialer & Messaging 
+EXTRA_GAPPS := true
 
 # Inherit from device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
