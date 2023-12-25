@@ -2542,7 +2542,8 @@
     </path>
 
     <path name="speaker-mono">
-        <ctl name="TFA_CHIP_SELECTOR" value="3" />
+
+        <ctl name="TFA_CHIP_SELECTOR" value="1" />
         <ctl name="TFA Profile" value="speaker" />
     </path>
 
