@@ -19,7 +19,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common risingOS stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
 
 # Call the BCR setup
 $(call inherit-product-if-exists, vendor/bcr/bcr.mk)
@@ -30,6 +30,8 @@ MATRIXX_MAINTAINER := AAMIR_ALI
 MATRIXX_CHIPSET := SM8250
 MATRIXX_BATTERY := 4200mAh
 MATRIXX_DISPLAY := 1080x2400
+
+TARGET_BOARD_PLATFORM := kona
 
 #EPPE
 TARGET_DISABLE_EPPE := true
