@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020 The LineageOS Project
+# Copyright (C) 2020 The derpOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_bladerunner.mk
+    $(LOCAL_DIR)/derp_bladerunner.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_bladerunner-user \
-    lineage_bladerunner-userdebug \
-    lineage_bladerunner-eng
+    derp_bladerunner-user \
+    derp_bladerunner-userdebug \
+    derp_bladerunner-eng
