@@ -19,22 +19,20 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common AOSP stuff
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/derp/config/common_full_phone.mk)
 
 # Viper
 $(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
 
 #Dolby
-$(call inherit-product-if-exists, hardware/dolby/dolby.mk)
+#$(call inherit-product-if-exists, hardware/dolby/dolby.mk)
 
 #BCR
 $(call inherit-product, vendor/bcr/bcr.mk)
 
 #VancedManager
-$(call inherit-product-if-exists, packages/apps/VancedManager/config.mk)
+#$(call inherit-product-if-exists, packages/apps/VancedManager/config.mk)
 
-#Inherit private keys
-#include vendor/lineage-priv/keys/keys.mk
 
 #EPPE
 TARGET_DISABLE_EPPE := true
@@ -46,7 +44,7 @@ TARGET_BOOT_ANIMATION_RES := 1440
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_bladerunner
+PRODUCT_NAME := derp_bladerunner
 PRODUCT_DEVICE := bladerunner
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := RMX2076
