@@ -24,6 +24,8 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Viper
 $(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
 
+$(call inherit-product, vendor/extras/config.mk)
+
 #Dolby
 $(call inherit-product-if-exists, hardware/dolby/dolby.mk)
 
@@ -41,6 +43,7 @@ TARGET_CORE_GMS := true
 TARGET_CORE_GMS_EXTRAS := true
 PRODUCT_NO_CAMERA := false
 TARGET_DEFAULT_PIXEL_LAUNCHER := true
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
 
 # Inherit from device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
