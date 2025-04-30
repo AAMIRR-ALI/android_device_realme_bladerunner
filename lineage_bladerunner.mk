@@ -22,20 +22,21 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Viper
-$(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
+#$(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
 
-$(call inherit-product, vendor/extras/config.mk)
+#$(call inherit-product, vendor/extras/config.mk)
 
 #EPPE
 TARGET_DISABLE_EPPE := true
 
 # RisingOS Stuffs
-RISING_MAINTAINER := YAZZDAN
-RISING_DEVICE := bladerunner
-TARGET_HAS_UDFPS := true
-TARGET_ENABLE_BLUR := true
+# Matrixx
+MATRIXX_BATTERY := 4300mAh
+MATRIXX_BUILD_TYPE := Official
+MATRIXX_CHIPSET := SM8250
+MATRIXX_DISPLAY := 1080x2400
 WITH_GMS := true
-PRODUCT_NO_CAMERA := false
+
 
 # Inherit from device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
