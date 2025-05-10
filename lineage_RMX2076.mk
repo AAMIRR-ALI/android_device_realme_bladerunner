@@ -23,10 +23,10 @@ PRODUCT_MODEL := RMX2076
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="RMX2076-user 14 UKQ1.230924.001 S.1d262cb-66b86-66b87 release-keys" \
-    BuildFingerprint=realme/RMX2076/RE54E4L1:14/UKQ1.230924.001/S.1d262cb-66b86-66b87:user/release-keys \
-    DeviceName=RE54E4L1 \
+    BuildDesc="RMX2076-user 12 SKQ1.211019.001 1650437182763 release-keys" \
+    BuildFingerprint=realme/RMX2076/RMX2076L1:12/SKQ1.211019.001/1650437182763:user/release-keys \
+    DeviceName=RMX2076L1 \
     DeviceProduct=RMX2076 \
-    SystemDevice=RE54E4L1 \
+    SystemDevice=RMX2076L1 \
     SystemName=RMX2076
 
