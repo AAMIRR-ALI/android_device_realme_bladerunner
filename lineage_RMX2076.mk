@@ -8,25 +8,25 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from RMX3371 device
-$(call inherit-product, device/realme/RMX3371/device.mk)
+# Inherit from RMX2076 device
+$(call inherit-product, device/realme/RMX2076/device.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_RMX3371
-PRODUCT_DEVICE := RMX3371
+PRODUCT_NAME := lineage_RMX2076
+PRODUCT_DEVICE := RMX2076
 PRODUCT_MANUFACTURER := realme
 PRODUCT_BRAND := realme
-PRODUCT_MODEL := RMX3371
+PRODUCT_MODEL := RMX2076
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="RMX3371-user 14 UKQ1.230924.001 S.1d262cb-66b86-66b87 release-keys" \
-    BuildFingerprint=realme/RMX3371/RE54E4L1:14/UKQ1.230924.001/S.1d262cb-66b86-66b87:user/release-keys \
+    BuildDesc="RMX2076-user 14 UKQ1.230924.001 S.1d262cb-66b86-66b87 release-keys" \
+    BuildFingerprint=realme/RMX2076/RE54E4L1:14/UKQ1.230924.001/S.1d262cb-66b86-66b87:user/release-keys \
     DeviceName=RE54E4L1 \
-    DeviceProduct=RMX3371 \
+    DeviceProduct=RMX2076 \
     SystemDevice=RE54E4L1 \
-    SystemName=RMX3371
+    SystemName=RMX2076
 

@@ -26,7 +26,7 @@ from extract_utils.utils import (
 )
 
 namespace_imports = [
-    'device/realme/RMX3371',
+    'device/realme/RMXRMX2076',
     'hardware/oplus',
     'hardware/qcom-caf/sm8250',
     'hardware/qcom-caf/wlan',
@@ -151,7 +151,7 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'RMX3371',
+    'RMX2076',
     'realme',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
