@@ -26,7 +26,7 @@ from extract_utils.utils import (
 )
 
 namespace_imports = [
-    'device/realme/RMXRMX2076',
+    'device/realme/RMX2076',
     'hardware/oplus',
     'hardware/qcom-caf/sm8250',
     'hardware/qcom-caf/wlan',
