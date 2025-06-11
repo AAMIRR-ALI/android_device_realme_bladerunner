@@ -5,4 +5,10 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_RMX3371.mk
+    $(LOCAL_DIR)/lineage_bladerunner.mk
+
+
+COMMON_LUNCH_CHOICES := \
+    lineage_bladerunner-user \
+    lineage_bladerunner-userdebug \
+    lineage_bladerunner-eng
