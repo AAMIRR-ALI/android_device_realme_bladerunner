@@ -912,9 +912,11 @@ vendor/etc/charger_fstab.qti
 vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 
 # Charger firmware
-odm/firmware/fastchg/21623/oplus_vooc_fw_rk826.bin
-odm/firmware/fastchg/21732/oplus_vooc_fw_rk826.bin
-odm/firmware/fastchg/21733/oplus_vooc_fw_rk826.bin
+odm/firmware/fastchg/19705/oplus_vooc_fw.bin
+odm/firmware/fastchg/19706/oplus_vooc_fw.bin
+odm/firmware/fastchg/19795/oplus_vooc_fw.bin
+odm/firmware/fastchg/20161/oplus_vooc_fw_rt5125.bin
+odm/firmware/fastchg/charging_thermal_config_default.txt
 
 # CNE
 vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_symlink
@@ -1016,12 +1018,12 @@ vendor/lib64/libsdmextension.so
 vendor/lib64/libtinyxml2_1.so
 
 # Display calibration data
-vendor/etc/ltm_config_samsung_ams662zs01_dsc_cmd_21623.xml
-vendor/etc/ltm_config_samsung_ams662zs01_dsc_cmd_mode_panel.xml
-vendor/etc/ltm_config_samsung_ams662zs01_dvt_dsc_cmd_mode_panel.xml
-vendor/etc/qdcm_calib_data_samsung_ams662zs01_dsc_cmd_21623.xml
-vendor/etc/qdcm_calib_data_samsung_ams662zs01_dsc_cmd_mode_panel.xml
-vendor/etc/qdcm_calib_data_samsung_ams662zs01_dvt_dsc_cmd_mode_panel.xml
+vendor/etc/ltm_config_19795_samsung_AMS678UW01_dsc_cmd_mode_panel.xml
+vendor/etc/ltm_config_samsung_AMS678UW01_dsc_cmd_mode_panel.xml
+vendor/etc/ltm_config_samsung_AMS678UW01_qhd_panel.xml
+vendor/etc/qdcm_calib_data_19795_samsung_AMS678UW01_dsc_cmd_mode_panel.xml
+vendor/etc/qdcm_calib_data_samsung_AMS678UW01_dsc_cmd_mode_panel.xml
+vendor/etc/qdcm_calib_data_samsung_AMS678UW01_qhd_panel.xml
 
 # Display postprocessing
 vendor/bin/hw/vendor.display.color@1.0-service
@@ -1813,9 +1815,9 @@ vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
 
 # Touchscreen firmware
-odm/firmware/tp/21623/FW_FT3658U_SAMSUNG.img
-odm/firmware/tp/21623/FW_FT3658U_SAMSUNG_FAE.img
-odm/firmware/tp/21623/LIMIT_FT3658U_SAMSUNG.img
+odm/firmware/tp/19795/FW_GT9886_SAMSUNG.img
+odm/firmware/tp/19795/FW_GT9886_SAMSUNG_FAE.img
+odm/firmware/tp/19795/LIMIT_GT9886_SAMSUNG.img
 
 # Trusted Execution Environment connector
 vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service

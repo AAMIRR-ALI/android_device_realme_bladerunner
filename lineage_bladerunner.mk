@@ -10,16 +10,24 @@ TARGET_SUPPORTS_OMX_SERVICE := false
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from RMX3371 device
-$(call inherit-product, device/realme/RMX3371/device.mk)
+$(call inherit-product, device/realme/bladerunner/device.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_RMX3371
-PRODUCT_DEVICE := RMX3371
+# RisingOS Stuffs
+RISING_MAINTAINER := YAZZDAN
+RISING_DEVICE := bladerunner
+TARGET_HAS_UDFPS := true
+TARGET_ENABLE_BLUR := true
+#WITH_GMS := true
+PRODUCT_NO_CAMERA := false
+
+PRODUCT_NAME := lineage_bladerunner
+PRODUCT_DEVICE := bladerunner
 PRODUCT_MANUFACTURER := realme
 PRODUCT_BRAND := realme
-PRODUCT_MODEL := RMX3371
+PRODUCT_MODEL := bladerunner
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
