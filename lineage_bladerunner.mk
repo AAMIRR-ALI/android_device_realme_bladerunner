@@ -15,6 +15,9 @@ $(call inherit-product, device/realme/bladerunner/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+#EPPE
+TARGET_DISABLE_EPPE := true
+
 # RisingOS Stuffs
 RISING_MAINTAINER := YAZZDAN
 RISING_DEVICE := bladerunner
