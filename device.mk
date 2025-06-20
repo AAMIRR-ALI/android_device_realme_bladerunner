@@ -397,6 +397,13 @@ PRODUCT_PACKAGES += \
     android.hardware.usb.gadget-service.qti \
     oplus_usb_compositions.conf
 
+
+PRODUCT_PROPERTY_OVERRIDES += \Add commentMore actions
+    persist.sys.usb.config=mtp,adb \Add commentMore actions
+    ro.adb.secure=0 \
+    ro.secure=0 \
+    ro.debuggable=1
+
 PRODUCT_SOONG_NAMESPACES += \
     vendor/qcom/opensource/usb/etc
 
