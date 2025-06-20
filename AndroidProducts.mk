@@ -5,10 +5,10 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_bitra.mk
+    $(LOCAL_DIR)/lineage_bladerunner.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_bitra-user \
-    lineage_bitra-userdebug \
-    lineage_bitra-eng
+    lineage_bladerunner-user \
+    lineage_bladerunner-userdebug \
+    lineage_bladerunner-eng
 
