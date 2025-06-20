@@ -390,12 +390,12 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
-
-# USB
-PRODUCT_PACKAGES += \
-    android.hardware.usb-service.qti \
-    android.hardware.usb.gadget-service.qti \
-    oplus_usb_compositions.conf
+#
+# # USB
+# PRODUCT_PACKAGES += \
+#     android.hardware.usb-service.qti \
+#     android.hardware.usb.gadget-service.qti \
+#     oplus_usb_compositions.conf
 
 
 PRODUCT_PROPERTY_OVERRIDES += \
