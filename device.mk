@@ -398,8 +398,8 @@ PRODUCT_PACKAGES += \
     oplus_usb_compositions.conf
 
 
-PRODUCT_PROPERTY_OVERRIDES += \Add commentMore actions
-    persist.sys.usb.config=mtp,adb \Add commentMore actions
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=mtp,adb \
     ro.adb.secure=0 \
     ro.secure=0 \
     ro.debuggable=1
