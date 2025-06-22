@@ -73,7 +73,6 @@ ODM_MANIFEST_NFC_FILES := \
     $(DEVICE_PATH)/manifest-nfc.xml
 
 # Kernel
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_BOOT_HEADER_VERSION := 2
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := \
@@ -86,7 +85,8 @@ BOARD_KERNEL_CMDLINE := \
     msm_rtb.filter=0x237 \
     reboot=panic_warm \
     service_locator.enable=1 \
-    swiotlb=2048
+    swiotlb=2048 \
+    androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
