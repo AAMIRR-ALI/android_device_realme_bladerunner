@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022-2024 The LineageOS Project
+# Copyright (C) 2022 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -9,14 +9,12 @@ on init
     write /proc/fastchg_fw_update 1
     write /proc/ui_soc_decimal 1
 
+    # Migrate cpuctl tasks once to cpuctl system
+    copy_per_line /dev/cpuctl/tasks /dev/cpuctl/system/tasks
+
 on fs
     # Update touchpanel firmware in case we ship newer firmware in /odm
     write /proc/touchpanel/tp_fw_update 0
-
-on post-fs-data
-    # Media XML codecs
-    setprop ro.media.xml_variant.codecs _kona
-    setprop ro.media.xml_variant.codecs_performance _kona
 
 on early-boot
     # Radio
@@ -37,13 +35,53 @@ on early-boot
     write /sys/bus/msm_subsys/devices/subsys10/restart_level RELATED
     write /sys/bus/msm_subsys/devices/subsys11/restart_level RELATED
 
-    # Disable serial console notification
-    stop console
-
 on boot
+    # Charger
+    chown system system /proc/charger/charger_factorymode_test
+    chown system system /proc/charger/integrate_gauge_fcc_flag
+    chown system system /proc/charger/hmac
+    chown system system /proc/charger_critical_log
+    chown system system /proc/fastchg_fw_update
+    chown system system /proc/tbatt_pwroff
+
+    chown system system /sys/class/oplus_chg/battery/call_mode
+    chown system system /sys/class/oplus_chg/battery/cool_down
+    chown system system /sys/class/oplus_chg/battery/bcc_current
+    chown system system /sys/class/oplus_chg/battery/bcc_exception
+    chown system system /sys/class/oplus_chg/battery/em_mode
+    chown system system /sys/class/oplus_chg/battery/mmi_charging_enable
+    chown system system /sys/class/oplus_chg/battery/ship_mode
+    chown system system /sys/class/oplus_chg/battery/short_c_hw_status
+    chown system system /sys/class/oplus_chg/battery/short_c_hw_feature
+    chown system system /sys/class/oplus_chg/battery/short_c_limit_chg
+    chown system system /sys/class/oplus_chg/battery/short_c_limit_rechg
+    chown system system /sys/class/oplus_chg/battery/short_ic_otp_status
+    chown system system /sys/class/oplus_chg/battery/short_ic_otp_value
+    chown system system /sys/class/oplus_chg/battery/short_ic_volt_thresh
+    chown system system /sys/class/oplus_chg/battery/soc_ajust
+    chown system system /sys/class/power_supply/battery/battery_info
+    chown system system /sys/class/power_supply/battery/battery_info_id
+    chown system system /sys/class/power_supply/battery/charging_enabled
+    chown system system /sys/class/power_supply/battery/cool_down
+    chown system system /sys/class/power_supply/battery/ship_mode
+    chown system system /sys/class/power_supply/battery/restore_soc
+    chown system system /sys/class/power_supply/battery/short_c_batt_in_idle
+    chown system system /sys/class/power_supply/battery/short_c_batt_limit_chg
+    chown system system /sys/class/power_supply/battery/short_c_batt_limit_rechg
+    chown system system /sys/class/power_supply/battery/short_c_batt_update_change
+    chown system system /sys/class/power_supply/battery/short_c_hw_feature
+    chown system system /sys/class/power_supply/battery/short_ic_otp_status
+    chown system system /sys/class/power_supply/battery/short_ic_volt_thresh
+    chown system system /sys/class/power_supply/battery/smooth_switch
+    chown system system /sys/class/power_supply/battery/soc_notify_ready
+    chown system system /sys/class/power_supply/battery/soc_reporting_ready
+
+    chown system system /sys/class/oplus_chg/usb/otg_switch
+    chown system system /sys/class/power_supply/usb/otg_switch
+    chown system system /sys/class/power_supply/usb/type
+
     # Display
     chmod 0666 /dev/oplus_display
-    chmod 0666 /sys/kernel/oplus_display/dimlayer_bl_en
     chmod 0666 /sys/kernel/oplus_display/dynamic_osc_clock
     chmod 0666 /sys/kernel/oplus_display/hbm
     chmod 0666 /sys/kernel/oplus_display/notify_fppress
@@ -51,19 +89,53 @@ on boot
     chmod 0666 /sys/kernel/oplus_display/power_status
 
     chown system system /dev/oplus_display
-    chown system system /sys/kernel/oplus_display/dimlayer_bl_en
     chown system system /sys/kernel/oplus_display/dynamic_osc_clock
+    chown system system /sys/kernel/oplus_display/hbm
     chown system system /sys/kernel/oplus_display/notify_fppress
     chown system system /sys/kernel/oplus_display/panel_serial_number
     chown system system /sys/kernel/oplus_display/power_status
+    chown system system /dev/tp_misc
+    chown system system /proc/touchpanel/tp_fw_update
+    chown system system /proc/touchpanel/oplus_tp_limit_enable
+    chown system system /proc/touchpanel/oplus_tp_direction
+    chown system system /proc/touchpanel/double_tap_enable
+    chown system system /proc/touchpanel/coordinate
+    chown system system /proc/touchpanel/game_switch_enable
+    chown system system /proc/touchpanel/fp_enable
+    chown system system /proc/touchpanel/baseline_test
+    chown system system /proc/touchpanel/kernel_grip_handle
+    chown system system /proc/touchpanel/curved_size
+    chown system system /proc/touchpanel/charge_detect
+    write /proc/touchpanel/smooth_level 3
+    write /proc/touchpanel/sensitive_level 3
 
-    chmod 0000 /sys/kernel/oplus_display/hbm
+    # DC Dimming
+    chown system system /sys/kernel/oplus_display/dimlayer_bl_en
+    chmod 0660 /sys/kernel/oplus_display/dimlayer_bl_en
 
     # Sensors
     chown system system /sys/devices/platform/soc/soc:sensor_fb/adsp_notify
 
     # TOF
     chown cameraserver cameraserver /dev/stmvl53l1_ranging
+
+    # Touchpanel
+    write /proc/touchpanel/game_switch_enable 1
+    write /proc/touchpanel/smooth_level 3
+    write /proc/touchpanel/sensitive_level 3
+    chown system system /dev/tp_misc
+    chown system system /proc/touchpanel/tp_fw_update
+    chown system system /proc/touchpanel/oplus_tp_limit_enable
+    chown system system /proc/touchpanel/oplus_tp_direction
+    chown system system /proc/touchpanel/double_tap_enable
+    chown system system /proc/touchpanel/coordinate
+    chown system system /proc/touchpanel/game_switch_enable
+    chown system system /proc/touchpanel/fp_enable
+    chown system system /proc/touchpanel/baseline_test
+    chown system system /proc/touchpanel/kernel_grip_handle
+    chown system system /proc/touchpanel/curved_size
+    chown system system /proc/touchpanel/charge_detect
+    chown system system /proc/touchpanel/wireless_charge_detect
 
 on property:ro.boot.prjname=*
     # Display
@@ -75,17 +147,80 @@ on property:sys.boot_completed=1
     copy /vendor/etc/Oppo_QC_LTM_Commercial_SM8250_2020_01_15.pfm /mnt/vendor/persist/data/pfm/licenses/1000-1000-no-exp-1186717196.pfm
     chown system system /mnt/vendor/persist/data/pfm/licenses/1000-1000-no-exp-1186717196.pfm
     chown system system /mnt/vendor/persist/data/pfm/licenses/1000-1000-no-exp-958228818.pfm
-    
-    # Enable suspend to RAM
-    write /sys/power/mem_sleep "deep"
 
+    # Migrate tasks again in case kernel threads are created during boot
+    copy_per_line /dev/cpuctl/tasks /dev/cpuctl/system/tasks
 
 on property:vendor.post_boot.parsed=1
-    # IRQ Tuning
-    # IRQ 300: msm_drm
-    # IRQ 338: kgsl_3d0_irq
-    write /proc/irq/300/smp_affinity_list 2
-    write /proc/irq/338/smp_affinity_list 1
+    # Configure UClamp
+    write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 1
+
+    write /dev/cpuctl/background/cpu.uclamp.max 50
+    write /dev/cpuctl/system-background/cpu.uclamp.max 50
+    write /dev/cpuctl/dex2oat/cpu.uclamp.max 60
+
+    # Configure CGroup tunning
+    write /dev/cpuctl/background/cpu.shares 1024
+    write /dev/cpuctl/system-background/cpu.shares 1024
+    write /dev/cpuctl/dex2oat/cpu.shares 512
+    write /dev/cpuctl/system/cpu.shares 20480
+    write /dev/cpuctl/camera-daemon/cpu.shares 20480
+    write /dev/cpuctl/foreground/cpu.shares 20480
+    write /dev/cpuctl/nnapi-hal/cpu.shares 20480
+    write /dev/cpuctl/rt/cpu.shares 20480
+    write /dev/cpuctl/top-app/cpu.shares 20480
+
+on property:sys.usb.config=adb && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x22D9
+    write /config/usb_gadget/g1/idProduct 0x2769
+
+on property:sys.usb.config=mass_storage && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idProduct 0x2768
+    write /config/usb_gadget/g1/idVendor 0x22D9
+
+on property:sys.usb.config=mtp && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x22D9
+    write /config/usb_gadget/g1/idProduct 0x2764
+
+on property:sys.usb.config=mtp,adb && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x22D9
+    write /config/usb_gadget/g1/idProduct 0x2765
+
+on property:sys.usb.config=ptp && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x22D9
+    write /config/usb_gadget/g1/idProduct 0x2771
+
+on property:sys.usb.config=ptp,adb && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x22D9
+    write /config/usb_gadget/g1/idProduct 0x2772
+
+on property:sys.usb.config=rndis,none && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x22D9
+    write /config/usb_gadget/g1/idProduct 0x276A
+
+on property:sys.usb.config=rndis,serial_cdev,diag && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x22D9
+    write /config/usb_gadget/g1/idProduct 0x2783
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=diag,adb && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x22D9
+    write /config/usb_gadget/g1/idProduct 0x276C
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=diag,diag_mdm,adb && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x22D9
+    write /config/usb_gadget/g1/idProduct 0x276E
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=mass_storage,adb && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x22D9
+    write /config/usb_gadget/g1/idProduct 0x2767
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=rndis,diag,adb && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x22D9
+    write /config/usb_gadget/g1/idProduct 0x2775
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=rndis,none,adb && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x22D9
+    write /config/usb_gadget/g1/idProduct 0x2766
 
 service oplus-sh /odm/bin/init.oplus.sh
     user root

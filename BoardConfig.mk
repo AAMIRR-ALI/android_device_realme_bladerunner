@@ -75,6 +75,7 @@ ODM_MANIFEST_NFC_FILES := \
     $(DEVICE_PATH)/manifest-nfc.xml
 
 # Kernel
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_BOOT_HEADER_VERSION := 2
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := \

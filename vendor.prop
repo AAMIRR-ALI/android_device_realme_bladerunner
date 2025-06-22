@@ -130,15 +130,6 @@ ro.crypto.dm_default_key.options_format.version=2
 ro.crypto.volume.filenames_mode=aes-256-cts
 ro.crypto.volume.metadata.method=dm-default-key
 
-# Dolby
-vendor.audio.dolby.ds2.enabled=false
-vendor.audio.dolby.ds2.hardbypass=false
-ro.vendor.dolby.dax.version=DAX3_3.6.0.12_r1
-ro.vendor.dolby.model=PAFM00
-ro.vendor.dolby.device=OP46C3
-ro.vendor.dolby.manufacturer=OPLUS
-ro.vendor.dolby.brand=OPLUS
-
 # DPM
 persist.vendor.dpm.idletimer.mode=default
 persist.vendor.dpmhalservice.enable=1
@@ -227,16 +218,15 @@ persist.vendor.sensors.debug.hal=0
 persist.vendor.sensors.sync_request=true
 
 # USB
-sys.usb.mtp.batchcancel=1
 vendor.usb.diag.func.name=diag
 vendor.usb.dpl.inst.name=dpl
-vendor.usb.product_string=realme GT NEO 3T
-vendor.usb.qdss.inst.name=qdss
+vendor.usb.product_string=realme X50 PRO
+vendor.usb.qdss.inst.name=qdss_sw
 vendor.usb.rmnet.func.name=gsi
 vendor.usb.rmnet.inst.name=rmnet
 vendor.usb.rndis.func.name=gsi
-vendor.usb.use_ffs_mtp=1
-vendor.usb.use_gadget_hal=1
+vendor.usb.use_ffs_mtp=0
+vendor.usb.use_gadget_hal=0
 
 # WiFi
 wifi.aware.interface=wifi-aware0
