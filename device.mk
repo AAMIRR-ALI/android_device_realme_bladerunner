@@ -444,7 +444,9 @@ PRODUCT_COPY_FILES += \
 # WiFi firmware symlinks
 PRODUCT_PACKAGES += \
     firmware_wlan_mac.bin_symlink \
-    firmware_WCNSS_qcom_cfg.ini_symlink
+    firmware_WCNSS_qcom_cfg.ini_symlink \
+    firmware_WCNSS_qcom_cfg.ini_qca6390_symlink \
+    firmware_wlanmdsp.otaupdate_symlink
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/realme/bladerunner/bladerunner-vendor.mk)
