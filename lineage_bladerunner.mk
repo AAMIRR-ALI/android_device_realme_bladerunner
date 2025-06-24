@@ -24,6 +24,9 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 #EPPE
 TARGET_DISABLE_EPPE := true
 
+#GMS
+WITH_GMS := true
+
 # Inherit from device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 

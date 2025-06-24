@@ -398,8 +398,6 @@ odm/etc/camera/micFilter/green_orange_2.png
 odm/etc/camera/micFilter/yellow_green_1.png
 odm/etc/camera/model/DocDetectV15.xbin
 odm/etc/camera/motionblur/model.data
-odm/etc/camera/omoji/assets/sdk_assets/ai_face_processor_e47_s1.bundle
-odm/etc/camera/omoji/assets/sdk_assets/controller_cpp.bundle
 odm/etc/camera/pf/PerfectColorSet/normal/colorLut0
 odm/etc/camera/pf/PerfectColorSet/normal/colorLut1
 odm/etc/camera/pf/PerfectColorSet/normal/colorLut10
@@ -750,7 +748,7 @@ odm/lib64/libcdm_metrics_protos.so
 odm/lib64/libcdm_protos.so
 odm/lib64/libcom.oplus.calidatacontainer.so
 odm/lib64/libcvface_api.so
-odm/lib64/libdav1d.so.4
+-odm/lib64/libdav1d.so.4
 odm/lib64/libeffect_custom.so
 odm/lib64/libfastov_dsp.so
 odm/lib64/libhci_face_camera_api.so
