@@ -91,6 +91,8 @@ def blob_fixup_nop_call(
 blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/hw/camera.qcom.so': blob_fixup()
         .add_needed('libcamera_metadata_shim.so'),
+    'vendor/lib/libgui1_vendor.so': blob_fixup()
+         .add_needed('libui-v30.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

@@ -884,8 +884,17 @@ vendor/lib64/libskewknob.so
 vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libsynx.so
 vendor/lib64/libthreadutils.so
+vendor/lib64/libmidasserviceintf_aidl.so
+odm/lib64/libarcsoft_qnnhtp.so
+odm/lib64/libarc.ion.so
+odm/lib64/libfuai_vendor.so
+vendor/lib64/libtriplecam_optical_zoom_vs.so
+odm/lib64/libexif-jpeg-aps.so
+vendor/lib64/vendor.oplus.hardware.commondcs-V1-ndk_platform.so
+odm/lib64/vendor.oplus.hardware.cameraextension-V1-service-impl.so
+vendor/lib64/vendor.oplus.hardware.cameraextension-V1-ndk_platform.so
+odm/lib64/vendor.oplus.hardware.cammidasservice-V1-ndk_platform.so
 vendor/lib64/vendor.oplus.hardware.cameraextension@1.0.so
-vendor/lib64/vendor.oplus.hardware.cammidasservice@1.0.so
 vendor/lib64/vendor.oplus.hardware.extcamera@1.0.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 
