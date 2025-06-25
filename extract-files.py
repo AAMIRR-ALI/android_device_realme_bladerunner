@@ -93,6 +93,9 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libcamera_metadata_shim.so'),
     'vendor/lib/libgui1_vendor.so': blob_fixup()
          .add_needed('libui-v30.so'),
+
+    'vendor/bin/hw/android.hardware.camera.provider@2.4-service_64': blob_fixup()
+        .add_needed('libhidlbase_shim.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
