@@ -759,6 +759,12 @@ service chre /vendor/bin/chre
     socket chre seqpacket 0660 root system
     shutdown critical
 
+service adsprpcd /vendor/bin/adsprpcd
+   class main
+   user media
+   group media
+   disabled
+
 on property:vendor.chre.enabled=0
    stop chre
 
