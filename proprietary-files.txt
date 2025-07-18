@@ -122,6 +122,45 @@ odm/lib64/libarcsoft_dualcam_refocus_left.so|af5108ddfcb055ea6d55a03831a39f5001a
 odm/lib64/libarcsoft_dualcam_refocus_preview.so|41c885f87cecd952b4fa5eb7459c3dc5f832b893
 odm/lib64/libarcsoft_dualcam_refocus_uw.so|ac685bfd05d0fd656a17df96c083086e91425802
 
+# Camera - Bladerunner
+odm/etc/camera/config/camera_unit_config
+odm/etc/camera/config/gc8054
+odm/etc/camera/config/hi846
+odm/etc/camera/config/imx616
+odm/etc/camera/config/oplus_camera_aps_config
+odm/etc/camera/config/oplus_camera_config
+odm/etc/camera/config/s5k3m5sx
+odm/etc/camera/config/s5kgw1
+odm/etc/camera/CameraHWConfiguration.config
+odm/etc/camera/camera_engmode.xml
+odm/etc/camera/settings_fdc.txt
+odm/lib64/camera/com.qti.sensor.gc8054.so
+odm/lib64/camera/com.qti.sensor.hi846.so
+odm/lib64/camera/com.qti.sensor.imx616.so
+odm/lib64/camera/com.qti.sensor.ov02a1b.so
+odm/lib64/camera/com.qti.sensor.s5k3m5sx.so
+odm/lib64/camera/com.qti.sensor.s5kgw1.so
+odm/lib64/camera/com.qti.sensormodule.ofilm_gc8054.bin
+odm/lib64/camera/com.qti.sensormodule.qtech_imx616.bin
+odm/lib64/camera/com.qti.sensormodule.qtech_s5k3m5sx.bin
+odm/lib64/camera/com.qti.sensormodule.qtech_s5kgw1.bin
+odm/lib64/camera/com.qti.sensormodule.shine_ov02a1b.bin
+odm/lib64/camera/com.qti.sensormodule.truly_hi846.bin
+odm/lib64/camera/com.qti.tuned.sm8250_ofilm_gc8054.bin
+odm/lib64/camera/com.qti.tuned.sm8250_qtech_imx616_19795.bin
+odm/lib64/camera/com.qti.tuned.sm8250_qtech_s5k3m5sx.bin
+odm/lib64/camera/com.qti.tuned.sm8250_qtech_s5kgw1.bin
+odm/lib64/camera/com.qti.tuned.sm8250_shine_ov02a1b.bin
+odm/lib64/camera/com.qti.tuned.sm8250_truly_hi846_19795.bin
+odm/lib64/libtriplecam_image_optical_zoom.so
+odm/lib64/libarc_sateis.so;DISABLE_CHECKELF
+odm/lib64/libarc_sateis_custom.so;FIX_SONAME
+odm/lib64/libtriplecam_optical_zoom_control.so
+odm/lib64/libtriplecam_video_optical_zoom.so
+odm/lib64/vendor.oplus.hardware.cameraextension@1.0-service-impl.so
+vendor/lib64/libtriplecam_optical_zoom_vs.so
+vendor/lib64/vendor.oplus.hardware.cameraextension@1.0.so
+
 # Camera (All)
 odm/bin/vl53l1_daemon_main
 odm/etc/camera/aicolor/duallut_background.bmp
@@ -658,7 +697,7 @@ odm/lib64/libarcsoft_pic_best.so
 odm/lib64/libarcsoft_portraitSN_hvx_stub.so
 odm/lib64/libarcsoft_portrait_super_night_raw.so
 odm/lib64/libarcsoft_preview_antibanding.so
-odm/lib64/libarcsoft_qnnhtp.so|760f3be31df910f991bcbf7dd5fe6af9545114e4
+odm/lib64/libarcsoft_qnnhtp.so
 odm/lib64/libarcsoft_scbokeh_image.so
 odm/lib64/libarcsoft_scbokeh_video.so
 odm/lib64/libarcsoft_smart_denoise.so
@@ -714,21 +753,6 @@ odm/lib64/vendor.oplus.hardware.orms@1.0.so
 vendor/lib/libcamxexternalformatutils.so
 vendor/lib/vendor.oplus.hardware.extcamera@1.0.so
 vendor/lib64/camera/com.qti.eeprom.truly_cmb433.so
-vendor/lib64/com.qti.feature2.anchorsync.so
-vendor/lib64/com.qti.feature2.demux.so
-vendor/lib64/com.qti.feature2.frameselect.so
-vendor/lib64/com.qti.feature2.fusion.so
-vendor/lib64/com.qti.feature2.generic.so
-vendor/lib64/com.qti.feature2.gs.so
-vendor/lib64/com.qti.feature2.hdr.so
-vendor/lib64/com.qti.feature2.memcpy.so
-vendor/lib64/com.qti.feature2.mfsr.so
-vendor/lib64/com.qti.feature2.qcfa.so
-vendor/lib64/com.qti.feature2.rawhdr.so
-vendor/lib64/com.qti.feature2.rt.so
-vendor/lib64/com.qti.feature2.serializer.so
-vendor/lib64/com.qti.feature2.stub.so
-vendor/lib64/com.qti.feature2.swmf.so
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.qti.chi.override.so
 vendor/lib64/libFace3DTA.so
@@ -736,7 +760,6 @@ vendor/lib64/libFace3D_hlos.so
 vendor/lib64/libQ6MSFR_manager_stub.so
 vendor/lib64/libbitmlengine.so
 vendor/lib64/libcamera_nn_stub.so
-vendor/lib64/libcamerapostproc.so
 vendor/lib64/libcamxexternalformatutils.so
 vendor/lib64/libcamxfacialfeatures.so
 vendor/lib64/libcamxfdalgo.so
@@ -779,7 +802,7 @@ odm/lib64/camera/components/com.oplus.node.aiaftrack.so
 odm/lib64/camera/components/com.oplus.node.drawafinfo.so
 odm/lib64/camera/components/com.oplus.node.ecs.so
 odm/lib64/camera/components/com.oplus.node.preview.so
-odm/lib64/camera/components/com.oplus.node.sat.so
+odm/lib64/camera/components/com.oplus.node.sat.so|36ad1cbe0667626eaac8bd61ce75bc1f6bf4ad0f
 odm/lib64/camera/components/com.oplus.node.sstabdefer.so
 odm/lib64/camera/components/com.oplus.node.sstabrealt.so
 odm/lib64/camera/components/com.oplus.node.videoenhance.so
@@ -874,7 +897,6 @@ odm/etc/camera/wide.bin
 vendor/firmware/CAMERA_ICP.elf
 
 # Camera (sensors)
-odm/lib64/camera/com.qti.sensor.hi846.so
 odm/lib64/camera/com.qti.sensor.imx471.so
 odm/lib64/camera/com.qti.sensor.ov02b.so
 odm/lib64/camera/com.qti.sensor.ov64b.so
@@ -910,9 +932,11 @@ vendor/etc/charger_fstab.qti
 vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 
 # Charger firmware
-odm/firmware/fastchg/21623/oplus_vooc_fw_rk826.bin
-odm/firmware/fastchg/21732/oplus_vooc_fw_rk826.bin
-odm/firmware/fastchg/21733/oplus_vooc_fw_rk826.bin
+odm/firmware/fastchg/19705/oplus_vooc_fw.bin
+odm/firmware/fastchg/19706/oplus_vooc_fw.bin
+odm/firmware/fastchg/19795/oplus_vooc_fw.bin
+odm/firmware/fastchg/20161/oplus_vooc_fw_rt5125.bin
+odm/firmware/fastchg/charging_thermal_config_default.txt
 
 # CNE
 vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_symlink
@@ -1014,12 +1038,12 @@ vendor/lib64/libsdmextension.so
 vendor/lib64/libtinyxml2_1.so
 
 # Display calibration data
-vendor/etc/ltm_config_samsung_ams662zs01_dsc_cmd_21623.xml
-vendor/etc/ltm_config_samsung_ams662zs01_dsc_cmd_mode_panel.xml
-vendor/etc/ltm_config_samsung_ams662zs01_dvt_dsc_cmd_mode_panel.xml
-vendor/etc/qdcm_calib_data_samsung_ams662zs01_dsc_cmd_21623.xml
-vendor/etc/qdcm_calib_data_samsung_ams662zs01_dsc_cmd_mode_panel.xml
-vendor/etc/qdcm_calib_data_samsung_ams662zs01_dvt_dsc_cmd_mode_panel.xml
+vendor/etc/ltm_config_19795_samsung_AMS678UW01_dsc_cmd_mode_panel.xml
+vendor/etc/ltm_config_samsung_AMS678UW01_dsc_cmd_mode_panel.xml
+vendor/etc/ltm_config_samsung_AMS678UW01_qhd_panel.xml
+vendor/etc/qdcm_calib_data_19795_samsung_AMS678UW01_dsc_cmd_mode_panel.xml
+vendor/etc/qdcm_calib_data_samsung_AMS678UW01_dsc_cmd_mode_panel.xml
+vendor/etc/qdcm_calib_data_samsung_AMS678UW01_qhd_panel.xml
 
 # Display postprocessing
 vendor/bin/hw/vendor.display.color@1.0-service
@@ -1424,9 +1448,9 @@ vendor/lib64/unnhal-acc-hta.so
 vendor/lib64/unnhal-acc-hvx.so
 
 # NFC
-odm/etc/nfc/libnfc-mtp-SN100.conf_19805:vendor/etc/libnfc-nxp.conf|22eebd616d96f5b25a2e97079ff543e70b880885
-odm/etc/nfc/libnfc-nci.conf_19805:vendor/etc/libnfc-nci.conf|1a99bfe520f18dfffb39d809c812c8bba10f3ae4
-odm/etc/nfc/sn100u.bin_sn100t_fw_01_10_53:vendor/firmware/sn100u.bin|797f5a57fa9247cd41d0e6c384e9465eb586a626
+odm/etc/nfc/libnfc-mtp-SN100.conf_19805:vendor/etc/libnfc-nxp.conf
+odm/etc/nfc/libnfc-nci.conf_19805:vendor/etc/libnfc-nci.conf
+odm/etc/nfc/sn100u.bin_sn100t_fw_01_10_53:vendor/firmware/sn100u.bin
 
 # Osense
 odm/lib64/libosenseaidlhalclient.so
@@ -1787,9 +1811,9 @@ vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
 
 # Touchscreen firmware
-odm/firmware/tp/21623/FW_FT3658U_SAMSUNG.img
-odm/firmware/tp/21623/FW_FT3658U_SAMSUNG_FAE.img
-odm/firmware/tp/21623/LIMIT_FT3658U_SAMSUNG.img
+odm/firmware/tp/19795/FW_GT9886_SAMSUNG.img
+odm/firmware/tp/19795/FW_GT9886_SAMSUNG_FAE.img
+odm/firmware/tp/19795/LIMIT_GT9886_SAMSUNG.img
 
 # Trusted Execution Environment connector
 vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
@@ -1897,8 +1921,9 @@ vendor/lib64/libtrustedapploader.so
 
 # WiFi
 odm/etc/wifi/bdwlan.elf
-odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini
 vendor/bin/cnss-daemon
+vendor/etc/wifi/qca6390/WCNSS_qcom_cfg.ini
+vendor/etc/wifi/qca6490/WCNSS_qcom_cfg.ini
 vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/wpa_supplicant_overlay.conf
 
