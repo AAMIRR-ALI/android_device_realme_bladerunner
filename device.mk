@@ -7,25 +7,6 @@
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
-# A/B
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
-
-AB_OTA_POSTINSTALL_CONFIG += \
-    RUN_POSTINSTALL_system=true \
-    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
-    FILESYSTEM_TYPE_system=erofs \
-    POSTINSTALL_OPTIONAL_system=true
-
-AB_OTA_POSTINSTALL_CONFIG += \
-    RUN_POSTINSTALL_vendor=true \
-    POSTINSTALL_PATH_vendor=bin/checkpoint_gc \
-    FILESYSTEM_TYPE_vendor=erofs \
-    POSTINSTALL_OPTIONAL_vendor=true
-
-PRODUCT_PACKAGES += \
-    checkpoint_gc \
-    otapreopt_script
-
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
@@ -210,11 +191,6 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_oplus)
 
-# Kernel
-LOCAL_KERNEL := device/realme/RMX3371-kernel/Image
-PRODUCT_COPY_FILES += \
-	$(LOCAL_KERNEL):kernel
-
 # Lineage Health
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
@@ -253,7 +229,7 @@ $(call inherit-product, hardware/oplus/overlay/generic/generic.mk)
 $(call inherit-product, hardware/oplus/overlay/qssi/qssi.mk)
 
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-custom
+    $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
@@ -265,9 +241,6 @@ PRODUCT_PACKAGES += \
     OPlusSettingsResTarget \
     OPlusSystemUIResTarget \
     WifiResTarget
-
-# Oplus Camera
-$(call inherit-product-if-exists, vendor/oplus/camera/opluscamera.mk)
 
 # Partitions
 PRODUCT_PACKAGES += \
@@ -415,6 +388,5 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     firmware_wlan_mac.bin_symlink \
     firmware_WCNSS_qcom_cfg.ini_symlink
-
 # Inherit from the proprietary files makefile.
-$(call inherit-product, vendor/realme/RMX3371/RMX3371-vendor.mk)
+$(call inherit-product, vendor/realme/bladerunner/bladerunner-vendor.mk)
