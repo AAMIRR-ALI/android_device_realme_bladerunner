@@ -120,6 +120,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
     wvmkiller
+    
+TARGET_OPTIMIZED_DEXOPT := true
 
 # fastbootd
 PRODUCT_PACKAGES += \
