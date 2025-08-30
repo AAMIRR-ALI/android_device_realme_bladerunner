@@ -89,9 +89,6 @@ TARGET_KERNEL_CONFIG := vendor/kona-perf_defconfig vendor/oplus.config
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO := true
 
-# Media
-TARGET_USES_ION := true
-
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := kona
