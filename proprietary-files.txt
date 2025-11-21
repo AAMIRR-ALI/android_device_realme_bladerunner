@@ -1918,11 +1918,11 @@ odm/lib64/mediadrm/libwvdrmengine.so
 vendor/lib64/libtrustedapploader.so
 
 # WiFi
-odm/etc/wifi/bin_version
-odm/etc/wifi/regdb.bin
-odm/etc/wifi/regdb_version
 odm/etc/wifi/bdwlan.elf
+odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini
 vendor/bin/cnss-daemon
+vendor/etc/wifi/p2p_supplicant_overlay.conf
+vendor/etc/wifi/wpa_supplicant_overlay.conf
 
 # WiFi Display (system) - from dada OS2.0.217.0.WOCMIXM
 system/framework/WfdCommon.jar;BOOT_JAR|76fab5ed43206989057284fa26e8b894f1da102f
