@@ -15,6 +15,23 @@ $(call inherit-product, device/realme/bladerunner/device.mk)
 # Inherit some common lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# AxionAOSP Specific Flags.
+AXION_MAINTAINER := YAZZDAN
+AXION_PROCESSOR := Snapdragon®_865
+TARGET_SUPPORTED_REFRESH_RATES := 60,75,90
+
+# Camera
+AXION_CAMERA_REAR_INFO := 64,8,2
+AXION_CAMERA_FRONT_INFO := 16
+
+TARGET_DISABLE_EPPE := true
+TARGET_ENABLE_BLUR := true
+TARGET_PREBUILT_BCR := true
+TORCH_STR_SUPPORTED := true
+TARGET_INCLUDE_VIPERFX := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+
 PRODUCT_NAME := lineage_bladerunner
 PRODUCT_DEVICE := bladerunner
 PRODUCT_BRAND := realme
