@@ -15,6 +15,9 @@ $(call inherit-product, device/realme/bladerunner/device.mk)
 # Inherit some common lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Inherit from YT REVANCED
+$(call inherit-product, vendor/revanced/products/revanced.mk)
+
 # AxionAOSP Specific Flags.
 AXION_MAINTAINER := YAZZDAN
 AXION_PROCESSOR := Snapdragon®_865
