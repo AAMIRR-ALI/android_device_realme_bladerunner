@@ -18,21 +18,13 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from YT REVANCED
 $(call inherit-product, vendor/revanced/products/revanced.mk)
 
-# AxionAOSP Specific Flags.
-AXION_MAINTAINER := YAZZDAN
-AXION_PROCESSOR := Snapdragon®_865
-TARGET_SUPPORTED_REFRESH_RATES := 60,75,90
-
-# Camera
-AXION_CAMERA_REAR_INFO := 64,8,2
-AXION_CAMERA_FRONT_INFO := 16
-
-TARGET_DISABLE_EPPE := true
-TARGET_ENABLE_BLUR := true
-TARGET_PREBUILT_BCR := true
-TORCH_STR_SUPPORTED := true
-TARGET_INCLUDE_VIPERFX := true
-TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTED_REFRESH_RATES := 60,90
+TARGET_CUSTOM_UDFPS := true
+WITH_GMS := true
+WITH_BCR := true
+SURFACE_FLINGER_BOOST := true
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,90)
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
 
 
 PRODUCT_NAME := lineage_bladerunner
