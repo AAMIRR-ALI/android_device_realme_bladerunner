@@ -22,8 +22,8 @@ REMOTE_NAME="yt-v"
 REMOTE_URL="https://github.com/PixelLineage/frameworks_base.git"   # <-- change this
 BRANCH="q2"
 
-COMMIT1="ad2669a7b506ee3a937c7301a73d2d19b80485d7"
-COMMIT2="e66905e3f32411be13ccc9d810e30138b61a056c"   
+COMMIT1="36dcbaae993a3a371d34b07377a05f059dca4b74"
+COMMIT2="fb5c424ea93086880f0414086ab372a97f22da7a"   
 
 # ──────────────────────────────────────────────────────────────
 # clone_if_missing + clean_clone (with depth=2)
