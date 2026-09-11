@@ -36,7 +36,7 @@ PRODUCT_PACKAGES += \
     OPlusSettingsProviderResTarget \
     OPlusSettingsResTarget \
     OPlusSystemUIResTarget \
-    bitraWifiResTarget
+    bladerunnerWifiResTarget
 
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 30
@@ -57,4 +57,4 @@ $(call soong_config_set,OPLUS_LINEAGE_TOUCH_HAL,INCLUDE_DIR,$(LOCAL_PATH)/touch/
 $(call inherit-product, device/realme/sm8250-common/common.mk)
 
 # Inherit from the proprietary files makefile.
-$(call inherit-product, vendor/realme/bitra/bitra-vendor.mk)
+$(call inherit-product, vendor/realme/bladerunner/bladerunner-vendor.mk)

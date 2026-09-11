@@ -14,7 +14,7 @@ namespace_imports = [
 ]
 
 module = ExtractUtilsModule(
-    'bitra',
+    'bladerunner',
     'realme',
     namespace_imports=namespace_imports,
 )
