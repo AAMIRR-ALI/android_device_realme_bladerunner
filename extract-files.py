@@ -10,6 +10,9 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
+    'device/realme/bladerunner',
+    'device/realme/sm8250-common',
+    'hardware/oplus',
     'vendor/realme/sm8250-common',
 ]
 
