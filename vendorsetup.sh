@@ -141,7 +141,7 @@ apply_ksun_patch(){
 # ──────────────────────────────────────────────────────────────
 divider
 info "Cloning kernel into kernel/realme/sm8250..."
-clone_if_missing "https://github.com/Matrixx-Devices/kernel_realme_bladerunner.git" "16.2" "kernel/realme/sm8250"
+clone_if_missing "https://github.com/Matrixx-Devices/kernel_realme_bladerunner.git" "17" "kernel/realme/sm8250"
 divider
 
 # ──────────────────────────────────────────────────────────────
@@ -159,7 +159,7 @@ divider
 
 
 apply_youtube_patch
-apply_ksun_patch
+#apply_ksun_patch
 
 
 echo "-------------------------------------"
