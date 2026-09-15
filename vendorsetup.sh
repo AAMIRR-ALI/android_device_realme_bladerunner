@@ -19,7 +19,7 @@ divider() { echo -e "${BOLD}─────────────────�
 # Ensure script is run from repo root
 ROOT_DIR=$(pwd)
 REMOTE_NAME="yt-v"
-REMOTE_URL="https://github.com/PixelLineage/frameworks_base.git"   # <-- change this
+REMOTE_URL="https://github.com/AAMIRR-ALI/YT-V_frameworks_base.git"   # <-- change this
 BRANCH="q2"
 
 COMMIT1="36dcbaae993a3a371d34b07377a05f059dca4b74"
@@ -148,9 +148,9 @@ divider
 # Other Repos
 # ──────────────────────────────────────────────────────────────
 info "Setting up other repositories..."
-clone_if_missing "https://github.com/Matrixx-Devices/vendor_realme_bladerunner.git" "16.2" "vendor/realme/bladerunner"
+clone_if_missing "https://gitlab.com/AAMIRR-ALI/vendor_realme_sm8250-common.git" "lineage-24.0" "vendor/realme/bladerunner"
 clone_if_missing "https://github.com/Matrixx-Devices/hardware_dolby.git" "16.2-munch" "hardware/dolby"
-clone_if_missing "https://github.com/Matrixx-Devices/hardware_oplus.git"  "16.2" "hardware/oplus"
+clone_if_missing "https://github.com/AAMIRR-ALI/android_hardware_oplus.git"  "lineage-24.0" "hardware/oplus"
 clone_if_missing "https://gitlab.com/AAMIRR-ALI/vendor-revanced.git"  "main" "vendor/revanced"
 #clean_clone "https://github.com/PocoF3Releases/packages_resources_devicesettings.git" "aosp-16" "packages/resources/devicesettings"
 divider
@@ -159,7 +159,7 @@ divider
 
 
 apply_youtube_patch
-#apply_ksun_patch
+apply_ksun_patch
 
 
 echo "-------------------------------------"
