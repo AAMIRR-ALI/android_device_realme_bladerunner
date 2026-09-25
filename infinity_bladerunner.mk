@@ -12,22 +12,21 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from bladerunner device
 $(call inherit-product, device/realme/bladerunner/device.mk)
 
-# Inherit some common lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common infinity stuff.
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
 # Inherit from YT REVANCED
 $(call inherit-product, vendor/revanced/products/revanced.mk)
 
-TARGET_SUPPORTED_REFRESH_RATES := 60,90
-TARGET_CUSTOM_UDFPS := true
-WITH_GMS := true
-WITH_BCR := true
-SURFACE_FLINGER_BOOST := true
-$(call soong_config_set,surfaceflinger,frame_rate_category_high,90)
-$(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
+# Infinity-X Specific Flags
+INFINITY_BUILD_TYPE := UNOFFICIAL
+INFINITY_MAINTAINER := "YAZZDAN330"
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_SUPPORTS_BLUR := true
+TARGET_HAS_UDFPS := true
 
 
-PRODUCT_NAME := lineage_bladerunner
+PRODUCT_NAME := infinity_bladerunner
 PRODUCT_DEVICE := bladerunner
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := RMX2076

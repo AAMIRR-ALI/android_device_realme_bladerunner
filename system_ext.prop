@@ -49,4 +49,9 @@ persist.vendor.sensors.enable.mag_filter=true
 # Vendor
 ro.vendor.qti.va_aosp.support=1
 
-ro.paranoid.maintainer=YAZZDAN330
+# InfinityX props
+ro.product.marketname=Realme X50 Pro 5G
+ro.infinity.soc=Snapdragon® 865
+ro.infinity.battery=4200 mAh
+ro.infinity.display=1264 x 2780, 90 Hz
+ro.infinity.camera=50MP + 8MP + 2MP

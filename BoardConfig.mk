@@ -143,7 +143,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 VENDOR_SECURITY_PATCH := 2025-03-01
 
 # SEPolicy
-include device/lineage/sepolicy/libion/sepolicy.mk
+include device/infinity/sepolicy/libion/sepolicy.mk
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 include hardware/oplus/sepolicy/qti/SEPolicy.mk
 
